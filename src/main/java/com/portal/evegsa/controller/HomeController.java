@@ -8,12 +8,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/home")
+@RequestMapping("/")
 public class HomeController {
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public String allFlats(Map<String, Object> map) {
+    @RequestMapping(value = "home", method = RequestMethod.GET)
+    public String dashboard(Map<String, Object> map) {
 
         return "dashboard";
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public String homePage(Map<String, Object> map) {
+
+        return "home";
     }
 }
