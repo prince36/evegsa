@@ -7,7 +7,7 @@ import java.util.Date;
 
 
 @Entity
-public class EventZ implements Serializable {
+public class Event implements Serializable {
 
 
     private Long idevent;
@@ -20,11 +20,11 @@ public class EventZ implements Serializable {
     private Date date_event;
 
 
-    public EventZ() {
+    public Event() {
 
     }
 
-    public EventZ(Long idevent, String title, String city, String location, String description, String category, Date date_create, Date date_event) {
+    public Event(Long idevent, String title, String city, String location, String description, String category, Date date_create, Date date_event) {
         this.idevent = idevent;
         this.title = title;
         this.city = city;
@@ -35,7 +35,7 @@ public class EventZ implements Serializable {
         this.date_event = date_event;
     }
 
-    public EventZ(Long idevent) {
+    public Event(Long idevent) {
         this.idevent = idevent;
     }
     @Id
